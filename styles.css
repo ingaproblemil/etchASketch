@@ -1,7 +1,11 @@
 .grid-item:hover {
-    background-color: aqua;
+    background-color: var(--blueCol);
 }
 
+.colored {
+    background-color: var(--blueCol)
+}
+    
 body {
     display: flex; 
     align-items: center;
@@ -16,20 +20,24 @@ body {
     
 }
 
+
 :root {
     --grid-cols: 1;
-    --grid-rows: 1; 
+    --grid-rows: 1;
+    --blueCol: blue;
+    --redCol: red;
+    --yelCol: yellow;
+    --randomCol: "";
 }
 
 #container {
     display: grid;
-    grid-gap: 1em;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
 
 .grid-item {
-    padding: 1em;
+    padding: 0;
     border: 1px solid #ddd;
     text-align: center;
 }

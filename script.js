@@ -10,13 +10,33 @@ function makeRows(rows, cols) {
 };
 
 function rowNum() {
-    let antal = prompt("Hur många då?")
+    let antal = prompt("Hur många då?");
     let rows = antal;
     let cols = antal;
     makeRows(rows, cols);
 }
 
 rowNum()
-// makeRows(16, 16);
 
+const boxes = document.getElementsByClassName('grid-item');
+console.log(boxes); // 👉️ [div.box, div.box, div.box]
 
+// ✅ addEventListener to all boxes
+for (const box of boxes) {
+  box.addEventListener('mouseover', function() {
+    
+    box.classList.add("colored");
+  });
+}
+
+for (const box of boxes) {
+  box.addEventListener('click', function() {
+    
+    box.classList.remove("colored");
+  });
+}
+
+// function paintIt() {
+//     var element = document.getElementsByClassName");
+//     element.classList.add("mystyle");
+//   }
