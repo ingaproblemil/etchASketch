@@ -36,7 +36,3 @@ for (const box of boxes) {
   });
 }
 
-// function paintIt() {
-//     var element = document.getElementsByClassName");
-//     element.classList.add("mystyle");
-//   }
