@@ -9,14 +9,22 @@ function makeRows(rows, cols) {
         };
 };
 
+const clearBtn = document.getElementById('clear-btn');
+const resetBtn= document.getElementById('reset');
+
+
 function rowNum() {
-    let antal = prompt("Hur många då?");
-    let rows = antal;
-    let cols = antal;
-    makeRows(rows, cols);
+  let antal = prompt("Hur många då?")
+  let rows = antal;
+  let cols = antal;
+  makeRows(rows, cols);
 }
 
+
+
 rowNum()
+
+
 
 const boxes = document.getElementsByClassName('grid-item');
 console.log(boxes); // 👉️ [div.box, div.box, div.box]
@@ -30,9 +38,14 @@ for (const box of boxes) {
 }
 
 for (const box of boxes) {
-  box.addEventListener('click', function() {
-    
+  clearBtn.addEventListener('click', function() {
     box.classList.remove("colored");
-  });
-}
+  })
+};
+
+resetBtn.addEventListener('click', function() {
+  window.location.reload();
+})
+
+
 
